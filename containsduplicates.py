@@ -5,7 +5,7 @@ def checkDups(nums):
     for num in nums:
         if num in seen:
             return True
-        seen.Add(num)
+        seen.add(num)
     return False
 
 print("This should return false")
