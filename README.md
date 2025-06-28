@@ -5,4 +5,4 @@ this repository stores all of the leetcode problems that I am currently working 
 the goal here is to use Neetcode to measure how I can improve my skills and as a path for completing the leetcode problems. This means that I will be targetting to something like ~300ish leetcode problems and writing out the python code examples for all of them.
 
 ## the language
-I have chosen to do all of my leetcode problems in python for now because it is the language that I am most comfortable with and am the best yet. I would eventually want to complete them in a different language, but I'm unsure if that will end up being TypeScript, Ruby, or Go. For now, I think it is reasonable to say that I can apply the syntax of python in a good enough way that I could learn how to apply the direct algorithm or logic in another language.
+I have chosen to do my leetcode problems in both python and c++. the reason is simple. i want to use a high level, easy syntax language and i want to use a low-level systems language. c++ really isn't the worst language to write code in. it's just awkward and different.
