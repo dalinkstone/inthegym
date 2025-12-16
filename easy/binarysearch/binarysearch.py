@@ -15,7 +15,7 @@ def binarySearch(nums, target):
         else:
             low = mid + 1
         print(f"Count of Iterations: {iterations}\n")
-        iterations += 1 
+        iterations += 1
     return None
 
 
