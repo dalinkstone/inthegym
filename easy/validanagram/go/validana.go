@@ -6,6 +6,13 @@ import (
 
 func validate(first, second string) bool {
 
+	if len(first) != len(second) {
+		return false
+	}
+
+	countFirst := make(map[string]int)
+	countSecond := make(map[string]int)
+
 	return false
 }
 
