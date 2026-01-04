@@ -57,7 +57,7 @@ func main() {
 	input_nums := []int{2, 3, 4, 1, 6, 5}
 
 	fmt.Println("This is merge sort, we are passing the array [2, 3, 4, 1, 6, 5]")
-	fmt.Println("This should return [2, 3, 4, 1, 6, 5]")
+	fmt.Println("This should return [1, 2, 3, 4, 5, 6]")
 
 	result := Merge(input_nums, 0, len(input_nums)-1)
 
