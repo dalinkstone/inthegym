@@ -1,5 +1,4 @@
 class Solution:
-
     def __init__(self):
         self._nums: list[int] = []
 
@@ -10,15 +9,14 @@ class Solution:
         return self._nums
 
     def quick_sort(self, nums: list[int], start: int, end: int) -> list[int]:
-
-        if (end - start + 1 <= 1):
+        if end - start + 1 <= 1:
             return self.get_nums()
 
         pivot = nums[end]
         left = start
 
-        for i in range(start, end):
-            if (nums[i] < pivot):
+        for i in range(start, end + 1):
+            if nums[i] < pivot:
                 temp = nums[left]
                 nums[left] = nums[i]
                 nums[i] = temp
@@ -33,8 +31,8 @@ class Solution:
 
         return nums
 
-def main():
 
+def main():
     print("This is quicksort and we are passing the array [2, 3, 4, 1, 6, 5]")
     print("This should return [1, 2, 3, 4, 5, 6]")
 
@@ -46,6 +44,10 @@ def main():
 
     solution_nums = new_solution.get_nums()
 
-    result = new_solution.quick_sort(solution_nums, 0, len(solution_nums))
+    result = new_solution.quick_sort(solution_nums, 0, len(solution_nums) - 1)
 
     print(f"{result}")
+
+
+if __name__ == "__main__":
+    main()
