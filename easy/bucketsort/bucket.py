@@ -9,6 +9,19 @@ class Solution:
         return self._nums
 
     def bucket_sort(self, nums: list[int]) -> list[int]:
+        max_val = max(nums)
+        counts = [0] * (max_val + 1)
+
+        for num in nums:
+            counts[num] += 1
+
+        i = 0
+        for n in range(0, len(counts)):
+            while counts[n] > 0:
+                nums[i] = n
+                i += 1
+                counts[n] -= 1
+
         return nums
 
 
