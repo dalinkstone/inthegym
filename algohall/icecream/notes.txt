@@ -1,0 +1,14 @@
+This algorithm should reverse the last half of the list
+
+We are passing [Billy, James, Tyler, Susie, Lauren, Matt, Greg, Nate, Heather, Vika]
+Which means we expect [Billy, James, Tyler, Susie, Lauren, Vika, Heather, Nate, Greg, Matt]
+Billy Billy James Tyler Susie Lauren Matt Greg Nate Heather
+
+We are passing [Thomas, Frank, Dave, Emma, Gabby, Sammi, Wallace]
+Which means we expect [Thomas, Frank, Dave, Wallace, Sammi, Gabby, Emma]
+Thomas Thomas Frank Dave Emma Gabby Sammi
+
+We are passing [Alex, Bailey, Caleb, Dalin, Ethan, Haley, Izzy, Jess, Kate, Luke]
+Which means we expect [Alex, Bailey, Caleb, Dalin, Ethan, Luke, Kate, Jess, Izzy, Haley, George]
+Alex Alex Bailey Caleb Dalin Ethan George Haley Izzy Jess Kate
+

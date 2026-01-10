@@ -15,10 +15,10 @@ class Students:
             self.students.append(self.head)
         else:
             current = self.head
-            while current is not None:
+            while current.next is not None:
                 current = current.next
-            current = student
-            self.students.append(current)
+            current.next = student
+            self.students.append(current.next)
 
     def get_students(self) -> list[Student]:
         return self.students
@@ -38,8 +38,29 @@ class Solution:
         return self.students.get_students()
 
     def reorder_students(self, students: Students) -> None:
+        if students.size() == 1 or students.size() == 0 or students.size() == 2:
+            return
+
         half = len(students.get_students()) // 2
-        size = students.size()
+        count = 0
+        current = students.head
+
+        while count != half - 1:
+            current = current.next
+            count += 1
+
+        end_of_half = current
+        previous = None
+        current = current.next
+
+        while current is not None:
+            next = current.next
+            current.next = previous
+            previous = current
+            current = next
+            count += 1
+
+        end_of_half.next = previous
 
         self.students = students
 
@@ -66,6 +87,18 @@ def main():
     sammi = Student("Sammi")
     wallace = Student("Wallace")
 
+    alex = Student("Alex")
+    bailey = Student("Bailey")
+    caleb = Student("Caleb")
+    dalin = Student("Dalin")
+    ethan = Student("Ethan")
+    george = Student("George")
+    haley = Student("Haley")
+    izzy = Student("Izzy")
+    jess = Student("Jess")
+    kate = Student("Kate")
+    luke = Student("Luke")
+
     new_students1 = Students()
     new_students2 = Students()
     new_students3 = Students()
@@ -89,17 +122,17 @@ def main():
     new_students2.add_student(sammi)
     new_students2.add_student(wallace)
 
-    new_students3.add_student(james)
-    new_students3.add_student(thomas)
-    new_students3.add_student(susie)
-    new_students3.add_student(emma)
-    new_students3.add_student(heather)
-    new_students3.add_student(gabby)
-    new_students3.add_student(lauren)
-    new_students3.add_student(sammi)
-    new_students3.add_student(nate)
-    new_students3.add_student(wallace)
-    new_students3.add_student(greg)
+    new_students3.add_student(alex)
+    new_students3.add_student(bailey)
+    new_students3.add_student(caleb)
+    new_students3.add_student(dalin)
+    new_students3.add_student(ethan)
+    new_students3.add_student(george)
+    new_students3.add_student(haley)
+    new_students3.add_student(izzy)
+    new_students3.add_student(jess)
+    new_students3.add_student(kate)
+    new_students3.add_student(luke)
 
     input_students1 = new_students1
     input_students2 = new_students2
@@ -125,22 +158,17 @@ def main():
     )
 
     print(*(student.name for student in result1))
-    
 
-    print(
-        "\nWe are passing [Thomas, Frank, Dave, Emma, Gabby, Sammi, Wallace]"
-    )
-    print(
-        "Which means we expect [Thomas, Frank, Dave, Wallace, Sammi, Gabby, Emma]"
-    )
+    print("\nWe are passing [Thomas, Frank, Dave, Emma, Gabby, Sammi, Wallace]")
+    print("Which means we expect [Thomas, Frank, Dave, Wallace, Sammi, Gabby, Emma]")
 
     print(*(student.name for student in result2))
 
     print(
-        "\nWe are passing [James, Thomas, Susie, Emma, Heather, Gabby, Lauren, Sammi, Nate, Wallace, Greg]"
+        "\nWe are passing [Alex, Bailey, Caleb, Dalin, Ethan, Haley, Izzy, Jess, Kate, Luke]"
     )
     print(
-        "Which means we expect [James, Thomas, Susie, Emma, Heather, Greg, Wallace, Nate, Sammi, Lauren, Gabby]"
+        "Which means we expect [Alex, Bailey, Caleb, Dalin, Ethan, Luke, Kate, Jess, Izzy, Haley, George]"
     )
 
     print(*(student.name for student in result3))
