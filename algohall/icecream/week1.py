@@ -64,6 +64,15 @@ class Solution:
 
         self.students = students
 
+    def print_students(self):
+        current = self.students.head
+        names = []
+
+        while current:
+            names.append(current.name)
+            current = current.next
+        print(", ".join(names))
+
 
 def main():
     print("This algorithm should reverse the last half of the list")
@@ -157,12 +166,12 @@ def main():
         "Which means we expect [Billy, James, Tyler, Susie, Lauren, Vika, Heather, Nate, Greg, Matt]"
     )
 
-    print(*(student.name for student in result1))
+    final_solution1.print_students()
 
     print("\nWe are passing [Thomas, Frank, Dave, Emma, Gabby, Sammi, Wallace]")
     print("Which means we expect [Thomas, Frank, Dave, Wallace, Sammi, Gabby, Emma]")
 
-    print(*(student.name for student in result2))
+    final_solution2.print_students()
 
     print(
         "\nWe are passing [Alex, Bailey, Caleb, Dalin, Ethan, Haley, Izzy, Jess, Kate, Luke]"
@@ -171,7 +180,7 @@ def main():
         "Which means we expect [Alex, Bailey, Caleb, Dalin, Ethan, Luke, Kate, Jess, Izzy, Haley, George]"
     )
 
-    print(*(student.name for student in result3))
+    final_solution3.print_students()
 
 
 if __name__ == "__main__":
