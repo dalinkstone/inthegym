@@ -1,0 +1,11 @@
+h = 800n^8
+difference = h - s
+
+do we know the value of h?
+if we do know the actual value of h then we can keep a record of the
+value of the side and the proximity to the value of h, then we are
+picking the minimum proximity value.
+
+we need to know if h can actually be calculated and if creating a list
+or using a dictionary/hash map is allowed or if it decreases the time
+complexity.
